@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String del_chat = chat_room_list.getSelectedItem().toString();
                 dbref.child("chat").child(del_chat).removeValue(); //선택한 chat_room 에서의 내용을 삭제
-                dbref.child(del_chat).removeValue(); //chat_room을 삭제
+                dbref.child(del_chat).removeValue(); // chat_room을 삭제
                 onRestart(); // 새로고침
 
             }
