@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name" translatable="false">Dotalk</string>
+    <string name="kakao_app_key" translatable="false">d67752d9c5d67f6ddad1dc1863890d9b</string>
+</resources>
