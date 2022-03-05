@@ -7,12 +7,12 @@
         <deviceKey>
           <Key>
             <type value="VIRTUAL_DEVICE_PATH" />
-            <value value="C:\Users\ogsal\.android\avd\Pixel_4_API_27.avd" />
+            <value value="C:\Users\ogsal\.android\avd\Galaxy_Ultra_API_30.avd" />
           </Key>
         </deviceKey>
       </Target>
     </targetSelectedWithDropDown>
-    <timeTargetWasSelectedWithDropDown value="2022-02-05T14:07:18.831403500Z" />
+    <timeTargetWasSelectedWithDropDown value="2022-02-13T12:50:04.582300300Z" />
     <targetsSelectedWithDialog>
       <Target>
         <type value="QUICK_BOOT_TARGET" />

@@ -28,7 +28,7 @@ public class splashActivity  extends AppCompatActivity {
                 startActivity(main);
                 finish();
             }
-        }, 1500); // 3초 후(3000) 스플래시 화면을 닫습니다 (보통 사용하는 시간)
+        }, 1500); // 1.5초 후(1500) 스플래시 화면을 닫습니다 (보통 사용하는 시간)
 
     }
 

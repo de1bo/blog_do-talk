@@ -4,11 +4,12 @@ public class ChatDTO {
 
     private String userName;
     private String message;
+    private int viewType;
 
-    public ChatDTO() {}
-    public ChatDTO(String userName, String message) {
+    public ChatDTO(String userName, String message,int viewType) {
         this.userName = userName;
         this.message = message;
+        this.viewType = viewType;
     }
 
     public void setUserName(String userName) {
@@ -18,6 +19,9 @@ public class ChatDTO {
     public void setMessage(String message) {
         this.message = message;
     }
+    public void setViewType(String message) {
+        this.viewType = viewType;
+    }
 
     public String getUserName() {
         return userName;
@@ -25,5 +29,8 @@ public class ChatDTO {
 
     public String getMessage() {
         return message;
+    }
+    public int getViewType(){
+        return  viewType;
     }
 }
