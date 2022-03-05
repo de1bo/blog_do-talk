@@ -21,6 +21,7 @@ public class ChatActivity extends AppCompatActivity {
 
     private String CHAT_NAME;
     private String USER_NAME;
+    private int viewType;
 
     private ListView chat_view;
     private EditText chat_edit;
@@ -54,12 +55,20 @@ public class ChatActivity extends AppCompatActivity {
                 if (chat_edit.getText().toString().equals(""))
                     return;
 
-                ChatDTO chat = new ChatDTO(USER_NAME, chat_edit.getText().toString()); //ChatDTO를 이용하여 데이터를 묶는다.
+                ChatDTO chat = new ChatDTO(USER_NAME, chat_edit.getText().toString(),viewType);
                 databaseReference.child("chatroom").child(CHAT_NAME).push().setValue(chat); // 데이터 푸쉬
                 chat_edit.setText(""); // 입력창 초기화
 
             }
         });
+    }
+    // 채팅의 주체에 따라 왼쪽 오른쪽 말풍선이 되도록 구분
+    public class chatPosition {
+        public class ViewType{
+            public static final int LEFT_CONTENT =0;
+            public static final int RIGHT_CONTENT =1;
+            public static final int CENTER_CONTNET = 2;
+        }
     }
 
     private void addMessage(DataSnapshot dataSnapshot, ArrayAdapter<String> adapter) {

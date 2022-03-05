@@ -4,7 +4,7 @@ public class ChatDTO {
 
     private String userName;
     private String message;
-    private int viewType;
+    private int viewType; //chatroom 안에서 채팅 틀을 구현하기 위한 값
 
     public ChatDTO(String userName, String message,int viewType) {
         this.userName = userName;
@@ -18,9 +18,6 @@ public class ChatDTO {
 
     public void setMessage(String message) {
         this.message = message;
-    }
-    public void setViewType(String message) {
-        this.viewType = viewType;
     }
 
     public String getUserName() {
