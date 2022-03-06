@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -23,7 +24,7 @@ public class ChatActivity extends AppCompatActivity {
     private String USER_NAME;
     private int viewType;
 
-    private ListView chat_view;
+    private RecyclerView chat_view;
     private EditText chat_edit;
     private Button chat_send;
 
@@ -36,7 +37,7 @@ public class ChatActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chat);
 
 
-        chat_view = (ListView) findViewById(R.id.chat_view);
+        chat_view = (RecyclerView) findViewById(R.id.chat_view);
         chat_edit = (EditText) findViewById(R.id.chat_edit);
         chat_send = (Button) findViewById(R.id.chat_sent);
 
@@ -81,10 +82,9 @@ public class ChatActivity extends AppCompatActivity {
         adapter.remove(chatDTO.getUserName() + " : " + chatDTO.getMessage());
     }
 
-    private void openChat(String chatName) {
+    private void openChat(String chatName){
         // 리스트 어댑터 생성 및 세팅
-        final ArrayAdapter<String> adapter
-
+         ArrayAdapter<String> adapter
                 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1);
         chat_view.setAdapter(adapter);
 
@@ -118,4 +118,5 @@ public class ChatActivity extends AppCompatActivity {
 
         });
     }
+
 }
